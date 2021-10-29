@@ -1,0 +1,17 @@
+﻿@model IEnumerable<MenuViewModel>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Nome</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(item.Nome, "Detail", "Menu", new { code = item.Id })</td>
+            </tr>
+        }
+    </tbody>
+</table>
